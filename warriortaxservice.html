@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warrior Financial Services | Professional Tax Preparation in Chicago</title>
+    <meta name="description" content="Professional tax preparation in Chicago and all 50 states. Individual, self-employed, and small business returns. Refund advances available. Warrior Financial Services LLC.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0A0C10;
+            --bg2: #12151C;
+            --bg3: #1A1E28;
+            --border: #252A36;
+            --gold: #C9A84C;
+            --gold-light: #E8CC6E;
+            --gold-dim: rgba(201, 168, 76, 0.15);
+            --red: #C62828;
+            --red-light: #E53935;
+            --text: #F0F0F0;
+            --text2: #9AA0AE;
+            --text3: #5A6070;
+            --white: #FFFFFF;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            background: rgba(10, 12, 16, 0.92);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 14px 0;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .nav-shield {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 20px;
+            color: var(--bg);
+        }
+
+        .nav-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .nav-name span { color: var(--gold); }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text2);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--gold-light); }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light)) !important;
+            color: var(--bg) !important;
+            padding: 9px 22px;
+            border-radius: 6px;
+            font-weight: 700 !important;
+            transition: transform 0.2s, box-shadow 0.2s !important;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 20px rgba(201, 168, 76, 0.3);
+        }
+
+        .mobile-menu {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 100px 32px 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(ellipse at 20% 50%, rgba(201, 168, 76, 0.06) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 20%, rgba(198, 40, 40, 0.04) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--gold-dim);
+            border: 1px solid rgba(201, 168, 76, 0.3);
+            border-radius: 50px;
+            padding: 6px 16px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gold-light);
+            margin-bottom: 24px;
+            animation: fadeIn 0.8s ease;
+        }
+
+        .hero-tag::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--gold-light);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 62px);
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -1.5px;
+            margin-bottom: 20px;
+            animation: fadeIn 0.8s ease 0.1s both;
+        }
+
+        .hero h1 .gold {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-desc {
+            font-size: 17px;
+            font-weight: 300;
+            color: var(--text2);
+            line-height: 1.7;
+            margin-bottom: 32px;
+            max-width: 520px;
+            animation: fadeIn 0.8s ease 0.2s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            animation: fadeIn 0.8s ease 0.3s both;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--bg);
+            padding: 14px 30px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(201, 168, 76, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text);
+            padding: 14px 30px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: border-color 0.2s, background 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--gold);
+            background: var(--gold-dim);
+        }
+
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            animation: fadeIn 1s ease 0.4s both;
+        }
+
+        .hero-card {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 36px;
+            width: 100%;
+            max-width: 420px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--red), var(--gold), var(--gold-light));
+        }
+
+        .hero-card-title {
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--gold);
+            margin-bottom: 24px;
+        }
+
+        .advance-badge {
+            background: linear-gradient(135deg, var(--red), var(--red-light));
+            color: white;
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .advance-badge .big {
+            font-size: 28px;
+            font-weight: 800;
+            display: block;
+        }
+
+        .advance-badge .small {
+            font-size: 12px;
+            font-weight: 500;
+            opacity: 0.9;
+        }
+
+        .hero-card-list {
+            list-style: none;
+        }
+
+        .hero-card-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--text2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .hero-card-list li:last-child { border-bottom: none; }
+
+        .hero-card-list li::before {
+            content: '✓';
+            color: var(--gold-light);
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        /* TRUST BAR */
+        .trust-bar {
+            background: var(--bg2);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 36px 32px;
+        }
+
+        .trust-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            text-align: center;
+        }
+
+        .trust-num {
+            font-size: 32px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .trust-label {
+            font-size: 12px;
+            font-weight: 500;
+            color: var(--text2);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+
+        /* SERVICES */
+        .services {
+            padding: 100px 32px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            text-align: center;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: clamp(26px, 4vw, 40px);
+            font-weight: 800;
+            letter-spacing: -0.8px;
+            margin-bottom: 16px;
+        }
+
+        .section-sub {
+            text-align: center;
+            font-size: 16px;
+            color: var(--text2);
+            font-weight: 300;
+            max-width: 550px;
+            margin: 0 auto 56px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .service-card {
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 32px;
+            transition: border-color 0.3s, transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .service-card:hover::before { opacity: 1; }
+
+        .service-card:hover {
+            border-color: rgba(201, 168, 76, 0.3);
+            transform: translateY(-4px);
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gold-dim);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 14px;
+            color: var(--text2);
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        /* ABOUT */
+        .about {
+            padding: 80px 32px;
+            background: var(--bg2);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .about-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: clamp(24px, 3vw, 34px);
+            font-weight: 800;
+            letter-spacing: -0.8px;
+            margin-bottom: 16px;
+        }
+
+        .about-text h2 span { color: var(--gold-light); }
+
+        .about-text p {
+            font-size: 15px;
+            color: var(--text2);
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .about-values {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .about-value {
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .about-value h4 {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: var(--gold-light);
+        }
+
+        .about-value p {
+            font-size: 13px;
+            color: var(--text2);
+            font-weight: 300;
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        .about-image {
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-image-placeholder {
+            width: 100%;
+            max-width: 400px;
+            aspect-ratio: 1;
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image-placeholder::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--red), var(--gold), var(--gold-light));
+        }
+
+        .shield-big {
+            font-size: 80px;
+            margin-bottom: 16px;
+        }
+
+        .about-image-placeholder h3 {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+        }
+
+        .about-image-placeholder h3 span {
+            color: var(--gold);
+        }
+
+        .about-image-placeholder p {
+            color: var(--text3);
+            font-size: 13px;
+            font-weight: 500;
+            margin-top: 4px;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 100px 32px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 24px 0;
+        }
+
+        .faq-q {
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            color: var(--text);
+            transition: color 0.2s;
+        }
+
+        .faq-q:hover { color: var(--gold-light); }
+
+        .faq-q::after {
+            content: '+';
+            font-size: 22px;
+            font-weight: 300;
+            color: var(--gold);
+            flex-shrink: 0;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.open .faq-q::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-a {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.open .faq-a {
+            max-height: 200px;
+            padding-top: 16px;
+        }
+
+        .faq-a p {
+            font-size: 14px;
+            color: var(--text2);
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        /* CONTACT */
+        .contact {
+            padding: 80px 32px;
+            background: var(--bg2);
+            border-top: 1px solid var(--border);
+        }
+
+        .contact-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info h2 {
+            font-size: 32px;
+            font-weight: 800;
+            letter-spacing: -0.8px;
+            margin-bottom: 12px;
+        }
+
+        .contact-info > p {
+            font-size: 15px;
+            color: var(--text2);
+            font-weight: 300;
+            margin-bottom: 32px;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .contact-detail:last-child { border-bottom: none; }
+
+        .contact-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--gold-dim);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-detail-text h4 {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text3);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-detail-text p,
+        .contact-detail-text a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .contact-detail-text a:hover { color: var(--gold-light); }
+
+        .contact-form {
+            background: var(--bg3);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 36px;
+        }
+
+        .contact-form h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text2);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 15px;
+            color: var(--text);
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--gold);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-submit {
+            width: 100%;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--bg);
+            border: none;
+            padding: 14px;
+            border-radius: 8px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 20px rgba(201, 168, 76, 0.3);
+        }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 32px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            color: var(--text3);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: var(--gold); }
+
+        .footer-copy {
+            font-size: 12px;
+            color: var(--text3);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .hero-inner { grid-template-columns: 1fr; text-align: center; }
+            .hero-desc { margin: 0 auto 32px; }
+            .hero-buttons { justify-content: center; }
+            .hero-visual { margin-top: 40px; }
+            .services-grid { grid-template-columns: 1fr; }
+            .about-inner { grid-template-columns: 1fr; }
+            .about-image { order: -1; }
+            .contact-inner { grid-template-columns: 1fr; }
+            .trust-inner { grid-template-columns: repeat(2, 1fr); }
+            .nav-links { display: none; }
+            .mobile-menu { display: block; }
+            .about-values { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 600px) {
+            .trust-inner { grid-template-columns: 1fr 1fr; gap: 20px; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-inner">
+            <a class="nav-brand" href="#">
+                <div class="nav-shield">W</div>
+                <div class="nav-name">Warrior <span>Financial</span></div>
+            </a>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+                <a href="http://square.site/book/16kpmyhhp11b4" class="nav-cta" target="_blank">Book Appointment</a>
+            </div>
+            <button class="mobile-menu" onclick="document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display === 'flex' ? 'none' : 'flex'">☰</button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <div class="hero-tag">Now Accepting 2025 Tax Returns</div>
+                <h1>Professional Tax Preparation<br>You Can <span class="gold">Trust</span></h1>
+                <p class="hero-desc">
+                    Warrior Financial Services provides fast, accurate, and IRS-compliant 
+                    tax preparation for individuals, self-employed professionals, and small 
+                    businesses. Serving Chicago and all 50 states.
+                </p>
+                <div class="hero-buttons">
+                    <a href="http://square.site/book/16kpmyhhp11b4" class="btn-gold" target="_blank">
+                        📅 Schedule Appointment
+                    </a>
+                    <a href="tel:+17736552363" class="btn-outline">
+                        📞 (773) 655-2363
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="hero-card-title">⚡ Refund Advance Available</div>
+                    <div class="advance-badge">
+                        <span class="big">Up to $7,000</span>
+                        <span class="small">Refund Advance — 0% APR Loan*</span>
+                    </div>
+                    <ul class="hero-card-list">
+                        <li>Get funds before your IRS refund arrives</li>
+                        <li>No upfront out-of-pocket fees</li>
+                        <li>Pay tax prep fees from your refund</li>
+                        <li>Subject to lender approval</li>
+                        <li>Available January through April</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST -->
+    <div class="trust-bar">
+        <div class="trust-inner">
+            <div>
+                <div class="trust-num">10+</div>
+                <div class="trust-label">Years Experience</div>
+            </div>
+            <div>
+                <div class="trust-num">50</div>
+                <div class="trust-label">States Served</div>
+            </div>
+            <div>
+                <div class="trust-num">1000s</div>
+                <div class="trust-label">Returns Filed</div>
+            </div>
+            <div>
+                <div class="trust-num">IRS</div>
+                <div class="trust-label">Compliant</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+        <div class="section-label">Our Services</div>
+        <h2 class="section-title">What We Do</h2>
+        <p class="section-sub">Comprehensive tax preparation built on accuracy, compliance, and protecting our clients.</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">📋</div>
+                <h3>Individual Tax Returns</h3>
+                <p>Federal and state income tax preparation for individuals and families. All filing statuses — Single, Married Filing Jointly, Head of Household, and more.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💼</div>
+                <h3>Self-Employed &amp; 1099</h3>
+                <p>Schedule C preparation for freelancers, gig workers, and independent contractors. We maximize your business deductions while keeping you IRS-compliant.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏢</div>
+                <h3>Small Business Taxes</h3>
+                <p>Tax preparation and planning for small businesses. We help you understand your tax obligations and find every legitimate deduction available.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📄</div>
+                <h3>Prior-Year &amp; Amended Returns</h3>
+                <p>Need to file a return from a previous year or correct a mistake? We prepare prior-year returns and amended returns (Form 1040-X).</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏦</div>
+                <h3>Refund Advances &amp; Bank Products</h3>
+                <p>Get your money faster with refund advances and pay-from-refund options. No upfront costs — fees are deducted from your refund. Subject to approval.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📨</div>
+                <h3>IRS Notices &amp; Letters</h3>
+                <p>Received a letter from the IRS? We help you understand what it means and respond appropriately to protect your interests.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="about-inner">
+            <div class="about-text">
+                <div class="section-label" style="text-align:left;">About Us</div>
+                <h2>Accuracy &amp; Compliance <span>First</span></h2>
+                <p>Warrior Financial Services LLC provides professional tax preparation done correctly and ethically. We prioritize accuracy, compliance, and protecting our clients from unnecessary tax issues and delays.</p>
+                <p>Our process is built around IRS and banking guidelines — no shortcuts, no guesswork, and no risky practices. We help clients file confidently, maximize their returns, and stay compliant.</p>
+                <div class="about-values">
+                    <div class="about-value">
+                        <h4>Accuracy</h4>
+                        <p>Every return is prepared using verified official documents and IRS-compliant methods.</p>
+                    </div>
+                    <div class="about-value">
+                        <h4>Ethics</h4>
+                        <p>We follow the law. No inflated deductions, no fabricated income, no shortcuts.</p>
+                    </div>
+                    <div class="about-value">
+                        <h4>Compliance</h4>
+                        <p>IRS regulations, state requirements, and banking guidelines — we follow them all.</p>
+                    </div>
+                    <div class="about-value">
+                        <h4>Protection</h4>
+                        <p>Due diligence on every return protects both you and our firm from IRS issues.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="about-image-placeholder">
+                    <div class="shield-big">🛡️</div>
+                    <h3>Warrior <span>Financial</span></h3>
+                    <p>Services LLC</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="section-label">FAQ</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-sub">Common questions about our tax preparation services.</p>
+
+        <div class="faq-item open">
+            <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                When does tax season start?
+            </div>
+            <div class="faq-a">
+                <p>Tax season typically begins in January when the IRS starts accepting e-filed returns. You can gather your documents early, but returns are not filed until all official tax documents (W-2s, 1099s) are received.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                Do I need my W-2 to file my taxes?
+            </div>
+            <div class="faq-a">
+                <p>Yes. We do not file tax returns without official W-2s and other required income documents. This protects you from errors, delays, and potential IRS issues.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                What is a refund advance?
+            </div>
+            <div class="faq-a">
+                <p>A refund advance is a loan based on your expected tax refund, allowing you to receive funds before the IRS processes your return. Advances are subject to approval by our third-party financial partners and are not guaranteed.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                What if I made a mistake on a previous return?
+            </div>
+            <div class="faq-a">
+                <p>We can help you file an amended return (Form 1040-X) to correct errors on previously filed returns. It's important to address mistakes as soon as possible to avoid penalties.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                Do you offer IRS audit assistance?
+            </div>
+            <div class="faq-a">
+                <p>Yes. If you receive an IRS notice or are selected for audit, we provide assistance to help you navigate the process and protect your rights. Our team will work with you every step of the way.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+                Can you file my taxes if I live outside Chicago?
+            </div>
+            <div class="faq-a">
+                <p>Absolutely. We serve clients in all 50 states. We can work with you remotely — you can send us your documents electronically and we'll prepare your return without needing an in-person visit.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="contact-inner">
+            <div class="contact-info">
+                <h2>Get In Touch</h2>
+                <p>Ready to file? Have questions? Schedule an appointment online or reach out directly. Walk-ins welcome during tax season.</p>
+
+                <div class="contact-detail">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-detail-text">
+                        <h4>Office</h4>
+                        <p>6127 S University Ave, Chicago, IL 60637</p>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-detail-text">
+                        <h4>Phone</h4>
+                        <a href="tel:+17736552363">(773) 655-2363</a>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-detail-text">
+                        <h4>Email</h4>
+                        <a href="mailto:bnwtaxservice@gmail.com">bnwtaxservice@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-detail">
+                    <div class="contact-icon">🕐</div>
+                    <div class="contact-detail-text">
+                        <h4>Hours</h4>
+                        <p>Mon–Sat: 9:00 AM – 9:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form action="mailto:bnwtaxservice@gmail.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="Your email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" name="phone" placeholder="Your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea name="message" placeholder="How can we help you?"></textarea>
+                    </div>
+                    <button type="submit" class="form-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-links">
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+            <a href="http://square.site/book/16kpmyhhp11b4" target="_blank">Book Appointment</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Warrior Financial Services LLC. All rights reserved. | 6127 S University Ave, Chicago, IL 60637 | (773) 655-2363</p>
+    </footer>
+
+</body>
+</html>
